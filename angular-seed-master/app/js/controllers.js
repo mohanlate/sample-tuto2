@@ -30,9 +30,17 @@ myControllers.ctrlCatalog = function ($scope){
 	$scope.orderProp = "ageGroup";
 };
 	
-myControllers.ctrlLearningResource = function ($scope, $routeParams){
+myControllers.ctrlLearningResource = function ($scope, $routeParams, svcCatalog){
 
 		$scope.learningResourceId = $routeParams.id;
+		
+		$scope.addToWishlist = function(id){
+			alert("Added to wishlist: " + id);
+		}
+
+		$scope.addToBasket = function(id){
+			alert("Added to basket. Click 'Back' to add more: " + id);
+		}
 };
 	
 

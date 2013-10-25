@@ -5,7 +5,9 @@
 angular.module('toyBuddyApp', [
   'ngRoute',
   'toyBuddyApp.controllers',
-  'toyBuddyApp.filters'
+  'toyBuddyApp.filters',
+  'toyBuddyApp.services',
+  'toyBuddyApp.animations'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/', {templateUrl: 'partials/home.html', controller: 'ctrlHome'});
