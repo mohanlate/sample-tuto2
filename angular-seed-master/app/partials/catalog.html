@@ -47,7 +47,7 @@
 
 		    <div class="row">
 				<div class="span2" ng-repeat="item in catalog | filter:mageGroup | orderBy:orderProp" class="thumbnail">
-					<a href="#/catalog/{{item.name}}" class="thumb"><img ng-src="img/{{item.imageURL}}"></a>
+					<a href="#/catalog/:{{item.id}}" class="thumb"><img ng-src="img/{{item.imageURL}}"></a>
 					<div>
 						<span>{{item.name}}</span>
 <!--  					<p>

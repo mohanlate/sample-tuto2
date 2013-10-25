@@ -4,7 +4,7 @@
 
 var app = angular.module('toyBuddyApp.controllers', []);
 
-var controllers = {};
+var myControllers = {};
 
 /*controllers.ctrlPhones = function ($scope, $http){
 	 $http.get({method: 'GET', url: "data/data.json"})
@@ -13,7 +13,7 @@ var controllers = {};
 		 });
 */	
 
-controllers.ctrlCatalog = function ($scope){
+myControllers.ctrlCatalog = function ($scope){
 
 	$scope.catalog = [
 	      			{id : "15",itemTypeId : "3", name : "Noddy: Master tubby goblin", description : "Noddy and his friends live in toyland where toys come to life adventures never cease join noddy on his adventures with naughty goblins speeding cards flying rockets bouncing balls and fanastic magical potions.In this all new series of 'Noddy Master Tubby Goblin And Other Stories' join Noddy on his adventures.", ageGroup : "1-2-3-4-5-6", miTypeId : "7-4-5", amount : "0", brand : "Excel", isFeatured : "0", nLikes : "0", imageURL : "masterTubbyGoblin.jpg", nParts : "0"},
@@ -25,10 +25,15 @@ controllers.ctrlCatalog = function ($scope){
 	    			{id : "8",itemTypeId : "0", name : "My Discovery House", description : "Push, slide, open, close, turn?a learning home for little ones where there is always more to explore. 5 play areas offer more than 75 learning responses. Children can learn opposites and daily routines and listen to fun songs and stories. Parents can connect to the online LeapFrog Learning Path for customized learning insights and ideas to expand the learning.", ageGroup : "1-2", miTypeId : "0-1-6-7", amount : "0", brand : "Leap Frog", isFeatured : "0", nLikes : "0", imageURL : "leapfrogmydiscovery.jpg", nParts : "0"},
 	    			{id : "9",itemTypeId : "0", name : "Stack n Surprise Blocks Peek-a-Boo Choo-Choo", description : "Bring building fun to a new level with music, lights, and peek-a-boo, pop-up action. Baby can stack four character blocks on the trains building surfaces, then push it along to make them come to life as silly faces pop up and down. Music plays and lights dance when baby presses the smokestack", ageGroup : "1-2", miTypeId : "0-1", amount : "0", brand : "Fisher Price", isFeatured : "0", nLikes : "0", imageURL : "FP_BlocksChooChoo.jpg", nParts : "0"},
 	    			{id : "6",itemTypeId : "0", name : "Laugh & Learn Peek-a-Boo Cuckoo", description : "A friendly light-up birdie pops out with a greeting, and lots of songs and activities keep baby busy! Press the light-up nose for a counting song, spin the dial to learn about night and day, turn the key, slide the beads, spin the clock hands and pass the time with plenty of learning fun! Plays 10+ songs and tunes, with fun sounds, phrases and volume control for quiet play", ageGroup : "1-2", miTypeId : "0-1-7", amount : "0", brand : "Fisher Price", isFeatured : "0", nLikes : "0", imageURL : "Fisher price_peekaboo cuckoo.jpg", nParts : "0"}
-];
-
+    ];
 	 
 	$scope.orderProp = "ageGroup";
 };
+	
+myControllers.ctrlLearningResource = function ($scope, $routeParams){
 
-app.controller(controllers);
+		$scope.learningResourceId = $routeParams.id;
+};
+	
+
+app.controller(myControllers);
