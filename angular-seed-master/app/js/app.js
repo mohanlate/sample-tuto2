@@ -4,7 +4,8 @@
 // Declare app level module which depends on filters, and services
 angular.module('toyBuddyApp', [
   'ngRoute',
-  'toyBuddyApp.controllers'
+  'toyBuddyApp.controllers',
+  'toyBuddyApp.filters'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/', {templateUrl: 'partials/home.html', controller: 'ctrlHome'});
