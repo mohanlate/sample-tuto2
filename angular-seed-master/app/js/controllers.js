@@ -35,7 +35,7 @@ myControllers.ctrlLearningResource = function ($scope, $routeParams, svcCatalog)
 		$scope.learningResourceId = $routeParams.id;
 		
 		$scope.addToWishlist = function(id){
-			alert("Added to wishlist: " + id);
+			$scope.res = svcCatalog.query().length;
 		}
 
 		$scope.addToBasket = function(id){

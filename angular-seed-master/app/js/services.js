@@ -8,7 +8,12 @@
 
 angular.module('toyBuddyApp.services', ['ngResource']).
 	factory('svcCatalog', ['$resource', function($resource){
-		return $resource('data/:id.json', {}, {
-			query: {method:'GET', params:{id:'learningResource'}, isArray:true}
+		return $resource('server/dbService.php', {}, {
+			query: {
+				method:'GET', 
+				params:{
+					id:'@id'
+						}, 
+				isArray:true}
 		});
 }]);
