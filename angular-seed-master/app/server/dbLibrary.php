@@ -6,7 +6,7 @@
 		}
 		
 		function get_items(){
-			return {status:'done'};
+			return "'status','done'";
 		}
 		
 		function register_new_item($id){

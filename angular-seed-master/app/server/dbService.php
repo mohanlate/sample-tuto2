@@ -44,8 +44,5 @@
 
 		$json = json_encode($result);
 		echo $json;
-
-
-
 		return;
 

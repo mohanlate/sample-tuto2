@@ -42,6 +42,12 @@ myControllers.ctrlLearningResource = function ($scope, $routeParams, svcCatalog)
 			alert("Added to basket. Click 'Back' to add more: " + id);
 		}
 };
+
+myControllers.ctrluser = function ($scope, $routeParams, svcUser){
+
+	$scope.user = svcUser.login($scope.username, $scope.password);
 	
+};
+
 
 app.controller(myControllers);
